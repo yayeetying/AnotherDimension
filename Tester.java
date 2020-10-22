@@ -5,11 +5,19 @@ public class Tester {
     int[] b = new int[5];
     int[] c = new int[0];
     int[] d = {0};
-    int[] e = {-10, 5, 9, 0, -29};
-    System.out.println(ArrayOps.sum(a));
-    System.out.println(ArrayOps.sum(b));
-    System.out.println(ArrayOps.sum(c));
-    System.out.println(ArrayOps.sum(d));
-    System.out.println(ArrayOps.sum(e));
+    int[] e = {9, 5, 0, -29};
+    int[] f = {-1000, 23, -272, -135, -11, 34, -64};
+    int[][] allArrays = {a, b, c, d, e, f};
+
+    //do sum() static method on all arrays
+    for (int i = 0; i < allArrays.length; i++) {
+      System.out.println(ArrayOps.sum(allArrays[i]));
+    }
+    System.out.println();
+
+    for (int i = 0; i < allArrays.length; i++) {
+      //because array c (index 2) is array of length 0
+      if (allArrays[i].length != 0) System.out.println(ArrayOps.largest(allArrays[i]));
+    }
   }
 }
