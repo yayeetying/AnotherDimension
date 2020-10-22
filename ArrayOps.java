@@ -32,4 +32,8 @@ public class ArrayOps {
     return lotsLargest;
   }
 
+  public static int sum(int[][] arr) {
+    return sum(sumRows(arr));
+  }
+
 }
