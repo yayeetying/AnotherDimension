@@ -19,14 +19,17 @@ public class ArrayOps {
   public static int[] sumRows(int[][] matrix) {
     int[] lotsSum = new int[matrix.length];
     for (int i = 0; i < matrix.length; i++) {
-      int sums = 0;
-      for (int j = 0; j < matrix[i].length; j++) {
-        sums += matrix[i][j];
-      }
-      lotsSum[i] = sums;
+      lotsSum[i] = sum(matrix[i]);
     }
     return lotsSum;
   }
 
+  public static int[] largestInRows(int[][] matrix) {
+    int[] lotsLargest = new int[matrix.length];
+    for (int i = 0; i < matrix.length; i++) {
+      lotsLargest[i] = largest(matrix[i]);
+    }
+    return lotsLargest;
+  }
 
 }
