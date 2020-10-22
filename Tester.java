@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Tester {
 
   public static void main(String[] args) {
@@ -19,5 +20,9 @@ public class Tester {
       //because array c (index 2) is array of length 0
       if (allArrays[i].length != 0) System.out.println(ArrayOps.largest(allArrays[i]));
     }
+    System.out.println();
+
+    //System.out.println(ArrayOps.sumRows(allArrays));
+    System.out.println(Arrays.toString(ArrayOps.sumRows(allArrays)));
   }
 }
