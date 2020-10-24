@@ -1,5 +1,6 @@
 public class ArrayOps {
 
+  //returns sum of values in 1D array
   public static int sum(int[] arr) {
     int sums = 0;
     for (int i = 0; i < arr.length; i++) {
@@ -8,6 +9,7 @@ public class ArrayOps {
     return sums;
   }
 
+  //returns largest element of 1D array
   public static int largest(int[] arr) {
     int maxNum = arr[0];
     for (int i = 0; i < arr.length; i++) {
@@ -16,6 +18,7 @@ public class ArrayOps {
     return maxNum;
   }
 
+  //returns 1D array w/ sums of rows of 2D array
   public static int[] sumRows(int[][] matrix) {
     int[] lotsSum = new int[matrix.length];
     for (int i = 0; i < matrix.length; i++) {
@@ -24,6 +27,7 @@ public class ArrayOps {
     return lotsSum;
   }
 
+  //returns 1D w/ int of largest elements of 2D array
   public static int[] largestInRows(int[][] matrix) {
     int[] lotsLargest = new int[matrix.length];
     for (int i = 0; i < matrix.length; i++) {
@@ -32,8 +36,23 @@ public class ArrayOps {
     return lotsLargest;
   }
 
+  //returns sum of all elements in 2D array
   public static int sum(int[][] arr) {
     return sum(sumRows(arr));
   }
+
+  //returns 1D array w/ sum of columns of 2D array
+  public static int[] sumCols(int[][] matrix) {
+    int[] lotsSum = new int[matrix[0].length];
+    for (int i = 0; i < matrix[0].length; i++) {
+      int sum = 0;
+      for (int j = 0; j < matrix.length; j++) {
+        sum += matrix[j][i];
+      }
+      lotsSum[i] = sum;
+    }
+    return lotsSum;
+  }
+
 
 }

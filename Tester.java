@@ -12,30 +12,43 @@ public class Tester {
     int[][] y = new int[5][2];
     int[][] A = { {1, 0, 12, -1}, {7, -2, 2, 1}, {-5, -2, 2, -9} };
     int[][][] all2DArrays = {allArrays, z, y, A};
+    int[][] L = { {2, 6, 9}, {-3, -6, 11}, {11, 11, 11} };
+    int[][] K = { {1}, {2}, {3}, {4}, {5} };
+    int[][][] rect2DArrays = {y, A, L, K};
 
-    //do sum() static method on all arrays
+    //do sum() static method on all 1D arrays
     for (int i = 0; i < allArrays.length; i++) {
       System.out.println(ArrayOps.sum(allArrays[i]));
     }
     System.out.println();
 
+    //do largest() static method on all 1D arrays
     for (int i = 0; i < allArrays.length; i++) {
       System.out.println(ArrayOps.largest(allArrays[i]));
     }
     System.out.println();
 
+    //do sumRows() static method on all 2D arrays
     for (int i = 0; i < all2DArrays.length; i++) {
       System.out.println(Arrays.toString(ArrayOps.sumRows(all2DArrays[i])));
     }
     System.out.println();
 
+    //do largestInRows() static method on all 2D arrays
     for (int i = 0; i < all2DArrays.length; i++) {
       System.out.println(Arrays.toString(ArrayOps.largestInRows(all2DArrays[i])));
     }
     System.out.println();
 
+    //do sum() static method on all 2D arrays
     for (int i = 0; i < all2DArrays.length; i++) {
       System.out.println(ArrayOps.sum(all2DArrays[i]));
+    }
+    System.out.println();
+
+    //do sumCols() on rectangular 2D array
+    for (int i = 0; i < rect2DArrays.length; i++) {
+      System.out.println(Arrays.toString(ArrayOps.sumCols(rect2DArrays[i])));
     }
     System.out.println();
   }
