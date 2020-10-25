@@ -54,5 +54,21 @@ public class ArrayOps {
     return lotsSum;
   }
 
+  //helper fxn to help with isRow/Col Magic
+  public static boolean helper(int[] arr) {
+    for (int i = 0; i < arr.length-1; i++) {
+      if (arr[i] != arr[i+1]) return false;
+    }
+    return true;
+  }
 
+  //returns true if each row has same sum; false otherwise
+  public static boolean isRowMagic(int[][] matrix) {
+    return helper(sumRows(matrix));
+  }
+
+  //returns true if each column has the same sum; false otherwise
+  public static boolean isColMagic(int[][] matrix) {
+    return helper(sumCols(matrix));
+  }
 }

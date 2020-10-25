@@ -14,7 +14,10 @@ public class Tester {
     int[][][] all2DArrays = {allArrays, z, y, A};
     int[][] L = { {2, 6, 9}, {-3, -6, 11}, {11, 11, 11} };
     int[][] K = { {1}, {2}, {3}, {4}, {5} };
-    int[][][] rect2DArrays = {y, A, L, K};
+    int[][] J = { {1, 2, 3, 4}, {2, 3, 4, 1}, {3, 4, 1, 2} };
+    int[][] H = { {1, 1, 1}, {2, 2, 2}, {3, 3, 3} };
+    int[][] G = { {2, 2, 2}, {2, 2, 2} };
+    int[][][] rect2DArrays = {y, A, L, K, J, H, G};
 
     //do sum() static method on all 1D arrays
     for (int i = 0; i < allArrays.length; i++) {
@@ -46,9 +49,21 @@ public class Tester {
     }
     System.out.println();
 
-    //do sumCols() on rectangular 2D array
+    //do sumCols() on rectangular 2D arrays
     for (int i = 0; i < rect2DArrays.length; i++) {
       System.out.println(Arrays.toString(ArrayOps.sumCols(rect2DArrays[i])));
+    }
+    System.out.println();
+
+    //do isRowMagic() on rectangular 2D arrays
+    for (int i = 0; i < rect2DArrays.length; i++) {
+      System.out.println(ArrayOps.isRowMagic(rect2DArrays[i]));
+    }
+    System.out.println();
+
+    //do isColMagic() on rectangular 2D arrays
+    for (int i = 0; i < rect2DArrays.length; i++) {
+      System.out.println(ArrayOps.isColMagic(rect2DArrays[i]));
     }
     System.out.println();
   }
