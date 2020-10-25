@@ -10,7 +10,7 @@ public class Tester {
     int[][] allArrays = {a, b, c, d, e};
     int[][] z = { {99, -72, 38}, {-102, -478, -2948, -1289}, {2, 3} };
     int[][] y = new int[5][2];
-    int[][] A = { {1, 0, 12, -1}, {7, -2, 2, 1}, {-5, -2, 2, -9} };
+    int[][] A = { {1, 0, 12, -1}, {7, 2, -2, 1}, {-5, -2, 2, -9} };
     int[][][] all2DArrays = {allArrays, z, y, A};
     int[][] L = { {2, 6, 9}, {-3, -6, 11}, {11, 11, 11} };
     int[][] K = { {1}, {2}, {3}, {4}, {5} };
@@ -66,5 +66,12 @@ public class Tester {
       System.out.println(ArrayOps.isColMagic(rect2DArrays[i]));
     }
     System.out.println();
+
+    //do isLocationMagic() on specified array
+    int[][] E = { {2, 4, 2}, {2, 2, 2} };
+    System.out.println(ArrayOps.isLocationMagic(E, 0, 1));
+    System.out.println(ArrayOps.isLocationMagic(E, 1, 1));
+    System.out.println(ArrayOps.isLocationMagic(A, 0, 2));
+    System.out.println(ArrayOps.isLocationMagic(A, 0, 3));
   }
 }

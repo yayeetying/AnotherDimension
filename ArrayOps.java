@@ -71,4 +71,9 @@ public class ArrayOps {
   public static boolean isColMagic(int[][] matrix) {
     return helper(sumCols(matrix));
   }
+
+  //returns true when row & column specified have same sum
+  public static boolean isLocationMagic(int[][] matrix, int row, int col) {
+    return sum(matrix[row]) == (sumCols(matrix))[col]; //return sumRow == sumCol
+  }
 }
